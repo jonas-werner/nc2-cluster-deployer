@@ -31,7 +31,7 @@ pip install -r requirements.txt
 Before running the script, you need to update the configuration variables at the top of `create_nc2_cluster_existing_vpc.py`:
 
 ### Required Variables
-Please create a ".env" file to hold the variables. A sample file has been provided. Remember to change the name to ".env" including the initial "." after updating it. For example: 
+Please create a ".env" file to hold the variables. A sample file has been provided. Remember to change the name to ".env" including the initial "." after updating it. Example of how to fill in the environment file: 
 ```bash
 # Nutanix API Configuration
 # Get your JSON Web Token with an API call or from 

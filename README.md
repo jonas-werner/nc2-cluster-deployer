@@ -17,14 +17,6 @@ This Python script creates an NC2 (Nutanix Cloud Clusters) cluster with Flow ena
 4. **AWS Cloud Account** registered in the NC2 portal
 5. **Organization ID** from your Nutanix account in the NC2 portal
 
-## Execution
-
-1. Clone or download this repository
-2. Install the required dependencies with pip:
-
-```bash
-pip install -r requirements.txt
-```
 
 ## Configuration
 
@@ -76,19 +68,27 @@ SSH_KEY_NAME            =your-key-name
 
 ## Usage
 
-1. **Create and activate a Python virtual environment**: 
+1. **Clone or download this repository**
+```bash
+git clone https://github.com/jonas-werner/nc2-cluster-deployer.git
+```
+2. **Create and activate a Python virtual environment**: 
 ```bash
 python3 -m venv <virtual-env-name>
 source ./<virtual-env-name>/bin/activate
 ```
-2. **Update Configuration**: Modify the variables in the .env file and save in the same directory as the script
-3. **Run the Script**: Execute the script from the command line:
+3. Install the required dependencies with pip:
+```bash
+pip install -r requirements.txt
+```
+4. **Update Configuration**: Modify the variables in the .env file and save in the same directory as the script
+5. **Run the Script**: Execute the script from the command line:
 
 ```bash
 python create_nc2_cluster_in_existing_aws_vpc
 ```
 
-4. **Review and Confirm**: The script will:
+6. **Review and Confirm**: The script will:
    - Validate your configuration
    - Display the cluster creation payload (optionally)
    - Ask for confirmation before proceeding

@@ -104,9 +104,10 @@ NC2 clusters require three distinct subnets for different components:
 - **Prism Central Subnet** (`prism_central.subnet.subnet_cloud_id`): Used for Prism Central management services  
 - **Flow Subnet** (`fvn_config.subnet_cloud_id`): Used for Flow Virtual Network (FVN) functionality
 
-Each subnet serves a specific purpose and must be properly configured in your existing VPC. The subnets are specified using different field structures in the API payload.
+Each subnet serves a specific purpose and must be properly configured in your existing VPC. The subnets are referenced in various sections in the REST payload and deployment will fail if they are not accurate. 
 
-## Example Payload Structure
+## Example Payload Structure 
+The payload will optionally be displayed prior to cluster creation during script execution. 
 
 ```json
 {

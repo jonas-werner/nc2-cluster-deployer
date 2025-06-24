@@ -85,7 +85,7 @@ pip install -r requirements.txt
 5. **Run the Script**: Execute the script from the command line:
 
 ```bash
-python create_nc2_cluster_in_existing_aws_vpc
+python ./create_nc2_cluster_in_existing_aws_vpc.py
 ```
 
 6. **Review and Confirm**: The script will:

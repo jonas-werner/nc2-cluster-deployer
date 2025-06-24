@@ -88,7 +88,7 @@ source ./<virtual-env-name>/bin/activate
 python create_nc2_cluster_in_existing_aws_vpc
 ```
 
-3. **Review and Confirm**: The script will:
+4. **Review and Confirm**: The script will:
    - Validate your configuration
    - Display the cluster creation payload (optionally)
    - Ask for confirmation before proceeding

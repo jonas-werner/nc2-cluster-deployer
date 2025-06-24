@@ -1,0 +1,43 @@
+# Rename this file as ".env" in the same directory as the script 
+# after having updated the values to match your environment. 
+
+# Nutanix API Configuration
+# Get your JSON Web Token with an API call or from 
+# the user Profile -> Advanced page of the NC2 portal
+NUTANIX_API_BASE_URL    =https://cloud.nutanix.com
+API_VERSION             =v2
+JSON_WEB_TOKEN          =your-web-token-here
+
+# AWS Account and Region Configuration
+AWS_REGION              =ap-northeast-3
+AWS_AVAILABILITY_ZONE   =ap-northeast-3a
+
+# Existing AWS VPC Configuration
+EXISTING_VPC_ID         =vpc-aaabbbcccddd
+
+# Subnet Mapping
+CLUSTER_SUBNET_ID       =subnet-aaaaaaaaaaaa
+PRISM_CENTRAL_SUBNET_ID =subnet-bbbbbbbbbbbb
+FLOW_SUBNET_ID          =subnet-cccccccccccc
+
+# Cluster Configuration
+CLUSTER_NAME            =awesome-cluster-name
+ORGANIZATION_ID         =your-org-id-from-the-nc2-portal
+AOS_VERSION             =7.0.1.5
+
+# Network Access Configuration
+# These entries determine the AWS Security group settings, controlling access to the cluster
+MANAGEMENT_ACCESS_CIDR  =10.0.0.0/8
+PRISM_ACCESS_CIDR       =10.0.0.0/8
+
+# Host Configuration
+# Single host clusters are supported for non-prod use but cannot be scaled up. 
+# Use a 3 node or larger cluster for production 
+HOST_TYPE               =i3.metal
+NUMBER_OF_HOSTS         =1
+
+# SSH Key Configuration
+# Your EC2 key pair name
+SSH_KEY_NAME            =your-key-name
+
+

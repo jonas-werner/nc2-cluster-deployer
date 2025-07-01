@@ -23,7 +23,7 @@ FLOW_SUBNET_ID          =subnet-cccccccccccc
 # Cluster Configuration
 CLUSTER_NAME            =awesome-cluster-name
 ORGANIZATION_ID         =your-org-id-from-the-nc2-portal
-AOS_VERSION             =7.0.1.5
+AOS_VERSION             =7.3
 
 # Network Access Configuration
 # These entries determine the AWS Security group settings, controlling access to the cluster

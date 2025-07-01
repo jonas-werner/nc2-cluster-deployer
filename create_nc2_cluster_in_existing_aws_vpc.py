@@ -167,7 +167,7 @@ def main():
         clusterId = data["cluster_id"]
         print("Cluster ID is: %s\n" % clusterId)
         print("Note: Cluster creation may take 45-60 minutes to complete when FVN is enabled.")
-        print("Progress can be through the Nutanix console.\n\n")
+        print("Progress can be monitored through the Nutanix console.\n\n")
     else:
         print("\nCluster creation failed. Please refer to any error messages below.\n")
         error_data = json.loads(response.text)

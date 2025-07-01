@@ -20,10 +20,10 @@ This Python script creates an NC2 (Nutanix Cloud Clusters) cluster with Flow ena
 
 ## Configuration
 
-Before running the script, you need to update the configuration variables at the top of `create_nc2_cluster_existing_vpc.py`:
+Before running the script, you need to update the configuration variables used by the script at runtime: 
 
 ### Required Variables
-Please create a ".env" file to hold the variables. A sample file has been provided. Remember to change the name to ".env" including the initial "." after updating it. Example of how to fill in the environment file: 
+Please create a ".env" file to hold the variables. A sample file called "sample-dot-env-file" has been provided. Remember to change the name to ".env" including the initial "." after updating it. Example of how to fill in the environment file: 
 ```bash
 # Nutanix API Configuration
 # Get your JSON Web Token with an API call or from 

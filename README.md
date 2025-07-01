@@ -47,7 +47,13 @@ FLOW_SUBNET_ID          =subnet-cccccccccccc
 # Cluster Configuration
 CLUSTER_NAME            =awesome-cluster-name
 ORGANIZATION_ID         =your-org-id-from-the-nc2-portal
-AOS_VERSION             =7.0.1.5
+
+# Make sure the AOS and Prism Central versions are compatible.
+# You can find the compatible versions in the Nutanix documentation.
+# Example: AOS_VERSION           =7.0.1.5
+# Example: PRISM_CENTRAL_VERSION =pc.2024.3.1.1
+AOS_VERSION             =7.3
+PRISM_CENTRAL_VERSION   =pc.7.3
 
 # Network Access Configuration
 # These entries determine the AWS Security group settings, controlling access to the cluster
@@ -87,6 +93,15 @@ pip install -r requirements.txt
 ```bash
 python ./create_nc2_cluster_in_existing_aws_vpc.py
 ```
+
+6. **Review and Confirm**: The script will:
+   - Validate your configuration
+   - Ask which cloud account to use
+   - Display the cluster creation payload (optionally)
+   - Ask for confirmation before proceeding
+   - Submit the cluster creation request
+   - Let you know if it succeeds or if it crashes and burns
+
 ### Example
 Example of running the script from the command line. 
 ```bash
@@ -113,15 +128,6 @@ Cluster ID is: aaaabbbbee-1122-3344-5566-aabbccddeeffgg
 Note: Cluster creation may take 45-60 minutes to complete when FVN is enabled.
 Progress can be viewed through the Nutanix console.
 ```
-
-6. **Review and Confirm**: The script will:
-   - Validate your configuration
-   - Ask which cloud account to use
-   - Display the cluster creation payload (optionally)
-   - Ask for confirmation before proceeding
-   - Submit the cluster creation request
-   - Let you know if it succeeds or if it crashes and burns
-
 
 ### Subnet Mapping
 

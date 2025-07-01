@@ -87,9 +87,36 @@ pip install -r requirements.txt
 ```bash
 python ./create_nc2_cluster_in_existing_aws_vpc.py
 ```
+### Example
+Example of running the script from the command line. 
+```bash
+python ./create_nc2_cluster_in_existing_aws_vpc.py
+
+NC2 Cluster Creation Script - Existing AWS VPC
+==================================================
+
+Available Cloud Accounts:
+  1. My AWS Account (provider: aws, status: ready)
+  2. My Azure Account (provider: azure, status: ready)
+
+Select the cloud account to use (1-2): 1
+
+Payload generation complete. Would you like to review the JSON payload? (y/N):
+
+Do you want to proceed with cluster creation? (y/N): y
+
+Status code: 202
+
+Cluster creation request submitted successfully!
+Cluster ID is: aaaabbbbee-1122-3344-5566-aabbccddeeffgg
+
+Note: Cluster creation may take 45-60 minutes to complete when FVN is enabled.
+Progress can be viewed through the Nutanix console.
+```
 
 6. **Review and Confirm**: The script will:
    - Validate your configuration
+   - Ask which cloud account to use
    - Display the cluster creation payload (optionally)
    - Ask for confirmation before proceeding
    - Submit the cluster creation request

@@ -30,6 +30,7 @@ FLOW_SUBNET_ID          = os.getenv("FLOW_SUBNET_ID")
 CLUSTER_NAME            = os.getenv("CLUSTER_NAME")
 ORGANIZATION_ID         = os.getenv("ORGANIZATION_ID")
 AOS_VERSION             = os.getenv("AOS_VERSION")
+PRISM_CENTRAL_VERSION   = os.getenv("PRISM_CENTRAL_VERSION")
 MANAGEMENT_ACCESS_CIDR  = os.getenv("MANAGEMENT_ACCESS_CIDR")
 PRISM_ACCESS_CIDR       = os.getenv("PRISM_ACCESS_CIDR")
 HOST_TYPE               = os.getenv("HOST_TYPE")
@@ -118,7 +119,7 @@ def build_payload(cloud_account_id: str) -> dict:
             "organization_id": ORGANIZATION_ID,
             "prism_central": {
                 "mode": "new",
-                "version": "pc.2024.3.1.1",
+                "version": PRISM_CENTRAL_VERSION,
                 "vm_size": "large",
                 "management_subnet": PRISM_CENTRAL_SUBNET_ID
             },
@@ -167,7 +168,7 @@ def main():
         clusterId = data["cluster_id"]
         print("Cluster ID is: %s\n" % clusterId)
         print("Note: Cluster creation may take 45-60 minutes to complete when FVN is enabled.")
-        print("Progress can be monitored through the Nutanix console.\n\n")
+        print("Progress can be viewed through the Nutanix console.\n\n")
     else:
         print("\nCluster creation failed. Please refer to any error messages below.\n")
         error_data = json.loads(response.text)

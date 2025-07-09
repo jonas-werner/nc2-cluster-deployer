@@ -121,6 +121,11 @@ def build_payload(cloud_account_id: str) -> dict:
                 "mode": "new",
                 "version": PRISM_CENTRAL_VERSION,
                 "vm_size": "large",
+                "ntp_server_ip_list": [
+                    "0.pool.ntp.org",
+                    "1.pool.ntp.org",
+                    "2.pool.ntp.org"
+                ],
                 "management_subnet": PRISM_CENTRAL_SUBNET_ID
             },
             "cluster_fault_tolerance": {
